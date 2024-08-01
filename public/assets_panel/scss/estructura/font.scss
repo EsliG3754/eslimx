@@ -6,53 +6,9 @@
 }
 
 @font-face {
-  font-family: "Dalek";
-  src: url("../font/Dalek.ttf") format("truetype");
+  font-family: "Satoshi";
+  src: url("../font/satoshi.ttf") format("truetype");
   // font-weight: 300;
   font-style: normal;
 }
 
-// Especial
-.c-dorado {
-  color: #cc9933 !important;
-}
-
-// Especial
-.c-amarillo {
-  color: #ecc704 !important;
-}
-
-// Unselected
-.c-gris-claro {
-  color: #adadad !important;
-}
-
-// Texto
-.c-gris-oscuro {
-  color: #4d4d4d !important;
-}
-
-// Background
-.c-azul {
-  color: #003366 !important;
-}
-
-// Especial
-.bg-amarillo {
-  background-color: #ecc704 !important;
-}
-
-// Unselected
-.bg-gris-claro {
-  background-color: #adadad !important;
-}
-
-// Texto
-.bg-gris-oscuro {
-  background-color: #4d4d4d !important;
-}
-
-// Background
-.bg-azul {
-  background-color: #003366 !important;
-}

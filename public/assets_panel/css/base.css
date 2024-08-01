@@ -4,46 +4,10 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Dalek";
-  src: url("../font/Dalek.ttf") format("truetype");
+  font-family: "Satoshi";
+  src: url("../font/satoshi.ttf") format("truetype");
   font-style: normal;
 }
-.c-dorado {
-  color: #cc9933 !important;
-}
-
-.c-amarillo {
-  color: #ecc704 !important;
-}
-
-.c-gris-claro {
-  color: #adadad !important;
-}
-
-.c-gris-oscuro {
-  color: #4d4d4d !important;
-}
-
-.c-azul {
-  color: #003366 !important;
-}
-
-.bg-amarillo {
-  background-color: #ecc704 !important;
-}
-
-.bg-gris-claro {
-  background-color: #adadad !important;
-}
-
-.bg-gris-oscuro {
-  background-color: #4d4d4d !important;
-}
-
-.bg-azul {
-  background-color: #003366 !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -64,7 +28,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Dalek", sans-serif;
+  font-family: "Satoshi", sans-serif;
 }
 
 h4,
