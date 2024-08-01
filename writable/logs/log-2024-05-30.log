@@ -1,0 +1,10 @@
+INFO - 2024-05-30 00:10:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-05-30 00:11:11 --> ErrorException: Maximum execution time of 60 seconds exceeded
+[Method: GET, Route: transparencia/licitaciones]
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-05-30 01:39:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-30 03:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-30 05:40:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-30 09:04:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-05-30 15:42:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

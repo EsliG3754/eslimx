@@ -1,0 +1,778 @@
+INFO - 2024-06-07 09:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 09:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 09:05:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 09:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 09:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 09:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 09:50:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 10:34:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'adm-remote'@'localhost' (using password: YES) in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'adm-remote', 'Cedhj$2023$', 'esli_db', 3306, '', 0)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Transparencia.php(100): App\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel->get_licitaciones(Array)
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Transparencia->licitaciones()
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Transparencia))
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#3 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel.php(132): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Transparencia.php(100): App\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel->get_licitaciones(Array)
+#5 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Transparencia->licitaciones()
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Transparencia))
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-06-07 10:34:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: transparencia/licitaciones]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, JSON_ARRAYAGG(
+                            JSON_OBJECT(
+                            \'id_archivo_licitacion\', `la`.`id_archivo_licitacion`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', `la`.`ruta_archivo`, \'created_at\', la.created_at
+                            )
+                        ) as archivos_json
+FROM `licitaciones` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `licitaciones_archivos` as `la` ON `la`.`id_licitacion` = `l`.`id_licitacion`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_licitacion`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 3 APPPATH\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Modules\Web\Controllers\Transparencia.php(100): App\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel->get_licitaciones([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Transparencia->licitaciones()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Transparencia))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 10:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 10:35:06 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'adm-remote'@'localhost' (using password: YES) in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:187
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(187): mysqli->real_connect('localhost', 'adm-remote', 'Cedhj$2023$', 'esli_db', 3306, '', 0)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel.php(132): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Transparencia.php(100): App\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel->get_licitaciones(Array)
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Transparencia->licitaciones()
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Transparencia))
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(421): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#3 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel.php(132): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Transparencia.php(100): App\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel->get_licitaciones(Array)
+#5 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Transparencia->licitaciones()
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Transparencia))
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2024-06-07 10:35:06 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+[Method: GET, Route: transparencia/licitaciones]
+in SYSTEMPATH\Database\BaseConnection.php on line 457.
+ 1 SYSTEMPATH\Database\BaseConnection.php(604): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, JSON_ARRAYAGG(
+                            JSON_OBJECT(
+                            \'id_archivo_licitacion\', `la`.`id_archivo_licitacion`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', `la`.`ruta_archivo`, \'created_at\', la.created_at
+                            )
+                        ) as archivos_json
+FROM `licitaciones` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `licitaciones_archivos` as `la` ON `la`.`id_licitacion` = `l`.`id_licitacion`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_licitacion`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 3 APPPATH\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel.php(132): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Modules\Web\Controllers\Transparencia.php(100): App\Modules\Panel\Pagina\Licitaciones\Models\LicitacionModel->get_licitaciones([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Transparencia->licitaciones()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Transparencia))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 10:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:45:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 10:46:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:15:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:15:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:17:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:17:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 11:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:43:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 12:43:10 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: datos/estadisticas]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Web\Controllers\Datos.php(69): CodeIgniter\Model->__call('get_agenda', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->estadisticas()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 12:43:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 12:43:19 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: datos/estadisticas]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Web\Controllers\Datos.php(69): CodeIgniter\Model->__call('get_agenda', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->estadisticas()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 12:44:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 12:44:33 --> mysqli_sql_exception: Unknown column 'la.id_archivo_estadisticas' in 'field list' in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `l`.*, `...', 0)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `...')
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `...')
+#3 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Datos\Models\DatosModel.php(82): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Datos.php(69): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_estadisticas(Array)
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->estadisticas()
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-06-07 12:44:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'la.id_archivo_estadisticas' in 'field list'
+[Method: GET, Route: datos/estadisticas]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 2 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(82): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Modules\Web\Controllers\Datos.php(69): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_estadisticas([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->estadisticas()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-06-07 12:44:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'la.id_archivo_estadisticas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 4 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(82): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Modules\Web\Controllers\Datos.php(69): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_estadisticas([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->estadisticas()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-06-07 12:44:33 --> [Caused by] mysqli_sql_exception: Unknown column 'la.id_archivo_estadisticas' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_estadisticas\', `la`.`id_archivo_estadisticas`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `estadisticas` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `estadisticas_archivos` as `la` ON `la`.`id_estadisticas` = `l`.`id_estadisticas`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_estadisticas`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 5 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(82): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Modules\Web\Controllers\Datos.php(69): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_estadisticas([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->estadisticas()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 12:45:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:45:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:48:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:48:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:54:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:54:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:56:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:57:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 12:57:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:05:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:06:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:07:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:07:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:07:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:07:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:08:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:09:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 13:24:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 14:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:00:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:00:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:01:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:18:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 15:18:59 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: datos/idhft]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Web\Controllers\Datos.php(85): CodeIgniter\Model->__call('get_idhft', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 15:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:21:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 15:36:15 --> mysqli_sql_exception: Unknown column 'la.id_archivo_idhft' in 'field list' in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `l`.*, `...', 0)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `...')
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `...')
+#3 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft(Array)
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-06-07 15:36:15 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'la.id_archivo_idhft' in 'field list'
+[Method: GET, Route: datos/idhft]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 2 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-06-07 15:36:15 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'la.id_archivo_idhft' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 4 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-06-07 15:36:15 --> [Caused by] mysqli_sql_exception: Unknown column 'la.id_archivo_idhft' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 5 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 15:36:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-06-07 15:36:22 --> mysqli_sql_exception: Unknown column 'la.id_archivo_idhft' in 'field list' in C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `l`.*, `...', 0)
+#1 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `...')
+#2 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `...')
+#3 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `...', Array, false)
+#4 C:\xampp\htdocs\CDEHJ\app\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\CDEHJ\app\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft(Array)
+#6 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+#7 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+#8 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\CDEHJ\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\xampp\htdocs\CDEHJ\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2024-06-07 15:36:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'la.id_archivo_idhft' in 'field list'
+[Method: GET, Route: datos/idhft]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 2 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft([...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-06-07 15:36:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'la.id_archivo_idhft' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 4 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-06-07 15:36:22 --> [Caused by] mysqli_sql_exception: Unknown column 'la.id_archivo_idhft' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = 2
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1629): CodeIgniter\Database\BaseConnection->query('SELECT `l`.*, `cet`.*, DATE_FORMAT(COALESCE(l.updated_at, l.created_at), "%d/%m/%Y %h:%i %p") as ultima_modificacion, concat_ws(\' \', `u`.`nombres`, `u`.`ape_paterno`, u.ape_materno) as creador, GROUP_CONCAT(
+                            JSON_OBJECT(
+                            \'id_archivo_idhft\', `la`.`id_archivo_idhft`, \'nombre_archivo\', `la`.`nombre_archivo`, \'ruta_archivo\', la.ruta_archivo
+                            )
+                        ) as archivos_json
+FROM `idhft` as `l`
+JOIN `usuarios` as `u` ON `u`.`id_usuario` = `l`.`created_by`
+JOIN `cat_estatus_transparencia` as `cet` ON `cet`.`id_estatus` = `l`.`id_estatus`
+LEFT JOIN `idhft_archivos` as `la` ON `la`.`id_idhft` = `l`.`id_idhft`
+WHERE `l`.`id_estatus` = :l.id_estatus:
+GROUP BY `l`.`id_idhft`
+ORDER BY `l`.`created_at` DESC', [...], false)
+ 5 APPPATH\Modules\Panel\Pagina\Datos\Models\DatosModel.php(144): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Modules\Web\Controllers\Datos.php(106): App\Modules\Panel\Pagina\Datos\Models\DatosModel->get_idhft([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Datos->idhft()
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Datos))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 15:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:40:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:42:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:42:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:48:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:48:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:52:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:59:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 15:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:00:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:00:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:04:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 16:14:30 --> Error: Class "App\Modules\Panel\Pagina\Prensa\Models\PrensaModel" not found
+[Method: GET, Route: prensa/boletines]
+in APPPATH\Modules\Web\Controllers\Prensa.php on line 25.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Modules\Web\Controllers\Prensa->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 16:15:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 16:15:37 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: prensa/boletines]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Web\Controllers\Prensa.php(69): CodeIgniter\Model->__call('get_boletines', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Prensa->boletines()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Prensa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 16:15:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 16:15:54 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: prensa/boletines]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Web\Controllers\Prensa.php(69): CodeIgniter\Model->__call('get_boletines', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Prensa->boletines()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Prensa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 16:15:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-06-07 16:15:55 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+[Method: GET, Route: prensa/boletines]
+in SYSTEMPATH\Database\BaseConnection.php on line 913.
+ 1 SYSTEMPATH\Model.php(705): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(911): CodeIgniter\Model->builder()
+ 3 APPPATH\Modules\Web\Controllers\Prensa.php(69): CodeIgniter\Model->__call('get_boletines', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Modules\Web\Controllers\Prensa->boletines()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Modules\Web\Controllers\Prensa))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-06-07 16:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:18:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:20:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:22:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:24:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:27:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:29:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:31:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:31:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:31:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:31:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:32:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:33:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:34:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:35:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-06-07 16:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

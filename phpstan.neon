@@ -1,0 +1,43 @@
+includes:
+    - vendor/codeigniter/phpstan-codeigniter/extension.neon
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+    level: 5
+    paths:
+        - app/Modules/Auth/Controllers
+        - app/Modules/Auth/Models
+        - app/Modules/Panel/Instituto/Controllers
+        - app/Modules/Panel/Instituto/Models
+        - app/Modules/Panel/Mesa/Controllers
+        - app/Modules/Panel/Mesa/Models
+        - app/Modules/Panel/Quejas/Controllers
+        - app/Modules/Panel/Quejas/Models
+        - app/Modules/Panel/Pagina/Autoridades/Controllers
+        - app/Modules/Panel/Pagina/Boletines/Controllers
+        - app/Modules/Panel/Pagina/Convenios/Controllers
+        - app/Modules/Panel/Pagina/Herramientas/Controllers
+        - app/Modules/Panel/Pagina/Licitaciones/Controllers
+        - app/Modules/Panel/Pagina/Mdfundamentales/Controllers
+        - app/Modules/Panel/Pagina/oic/Controllers
+        - app/Modules/Panel/Pagina/Autoridades/Models
+        - app/Modules/Panel/Pagina/Boletines/Models
+        - app/Modules/Panel/Pagina/Convenios/Models
+        - app/Modules/Panel/Pagina/Herramientas/Models
+        - app/Modules/Panel/Pagina/Licitaciones/Models
+        - app/Modules/Panel/Pagina/Mdfundamentales/Models
+        - app/Modules/Panel/Pagina/oic/Models
+        - app/Modules/Panel/Usuarios/Controllers
+        - app/Modules/Panel/Usuarios/Models
+        - app/Modules/Web/Controllers
+        - app/Modules/Web/Models
+    # Puedes seguir añadiendo otros módulos aquí de la misma manera
+    scanDirectories:
+        - vendor/codeigniter4/framework/system
+    bootstrapFiles:
+        - vendor/autoload.php
+        - app/Config/Boot/development.php
+    # Ignorar archivos específicos de vistas si no se desea analizar HTML/PHP mixto
+    excludePaths:
+        - app/Modules/*/Views/
+    ignoreErrors:

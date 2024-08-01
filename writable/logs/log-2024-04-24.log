@@ -1,0 +1,71 @@
+INFO - 2024-04-24 08:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 08:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 09:53:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 09:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 09:53:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:00:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:13:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:25:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:27:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 10:38:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 11:21:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:07:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:07:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 12:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-04-24 13:21:17 --> ErrorException: include(C:\xampp\htdocs\CDEHJ\vendor\composer/../../app/Modules/Web/Controllers/Micrositio.php): Failed to open stream: No such file or directory
+[Method: GET, Route: micrositio/dfundamentales]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer/../../app/Modules/Web/Controllers/Micrositio.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer/../../app/Modules/Web/Controllers/Micrositio.php')
+ 4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Modules\\Web\\Controllers\\Micrositio')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Modules\\Web\\Controllers\\Micrositio', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-04-24 14:54:58 --> ErrorException: include(C:\xampp\htdocs\CDEHJ\vendor\composer/../../app/Modules/Web/Controllers/Micrositio.php): Failed to open stream: No such file or directory
+[Method: GET, Route: micrositio/dfundamentales]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer/../../app/Modules/Web/Controllers/Micrositio.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer/../../app/Modules/Web/Controllers/Micrositio.php')
+ 4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Modules\\Web\\Controllers\\Micrositio')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Modules\\Web\\Controllers\\Micrositio', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+CRITICAL - 2024-04-24 14:55:05 --> ErrorException: include(C:\xampp\htdocs\CDEHJ\vendor\composer/../../app/Modules/Web/Controllers/Micrositio.php): Failed to open stream: No such file or directory
+[Method: GET, Route: micrositio/dfundamentales]
+in VENDORPATH\composer\ClassLoader.php on line 576.
+ 1 VENDORPATH\composer\ClassLoader.php(576): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer/../../app/Modules/Web/Controllers/Micrositio.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer\\ClassLoader.php', 576)
+ 2 VENDORPATH\composer\ClassLoader.php(576): include()
+ 3 VENDORPATH\composer\ClassLoader.php(427): Composer\Autoload\{closure}('C:\\xampp\\htdocs\\CDEHJ\\vendor\\composer/../../app/Modules/Web/Controllers/Micrositio.php')
+ 4 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Modules\\Web\\Controllers\\Micrositio')
+ 5 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Modules\\Web\\Controllers\\Micrositio', true)
+ 6 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\xampp\\htdocs\\CDEHJ\\public\\index.php')
+INFO - 2024-04-24 15:08:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:08:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:22:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 15:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 16:39:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-04-24 16:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
