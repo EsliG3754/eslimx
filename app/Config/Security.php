@@ -62,7 +62,7 @@ class Security extends BaseConfig
      *
      * Defaults to two hours (in seconds).
      */
-    public int $expires = 43200;
+    public int $expires = 7200;
 
     /**
      * --------------------------------------------------------------------------
@@ -79,8 +79,10 @@ class Security extends BaseConfig
      * --------------------------------------------------------------------------
      *
      * Redirect to previous page with error on failure.
+     *
+     * @see https://codeigniter4.github.io/userguide/libraries/security.html#redirection-on-failure
      */
-    public bool $redirect = false;
+    public bool $redirect = (ENVIRONMENT === 'production');
 
     /**
      * --------------------------------------------------------------------------

@@ -33,76 +33,26 @@ abstract class BaseController extends Controller
      * class instantiation. These helpers will be available
      * to all other controllers that extend BaseController.
      *
-     * @var array
+     * @var list<string>
      */
     protected $helpers = [];
 
     /**
-     * Constructor.
+     * Be sure to declare properties for any property fetch you initialized.
+     * The creation of dynamic property is deprecated in PHP 8.2.
+     */
+    // protected $session;
+
+    /**
+     * @return void
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
-        helper('general');
-        helper('html');
-        helper('text');
-        helper('array');
-        helper('inflector');
-        helper('filesystem');
 
-        //Custom helpers
-        helper('utils');
         // Preload any models, libraries, etc, here.
 
         // E.g.: $this->session = \Config\Services::session();
-    }
-
-    protected $session;
-
-    public function __construct()
-    {
-        $this->session =  \Config\Services::session();
-    }
-
-    public function renderSimpleView($views, $data = [])
-    {
-        $output = view('Web/Views/partials/head', $data);
-        // $output .= view('Panel/base/menu_simple', $this->session->get());
-
-        foreach ($views as $view) {
-            $output .= view($view, $data);
-        }
-
-        $output .= view('Panel/base/footer', $data);
-        return $output;
-    }
-
-    public function renderPaginaView($views, $data = [])
-    {
-        $data += $this->session->get();
-        $output = view('Web/Views/partials/head', $data);
-        $output .= view('Web/Views/partials/navbar', $data);
-        // $output .= view('Web/Views/partials/accesibilidad', $data);
-
-        foreach ($views as $view) {
-            $output .= view('Web/Views/' . $view, $data);
-        }
-
-        $output .= view('Web/Views/partials/footer', $data);
-        return $output;
-    }
-
-    public function renderPanelView($views, $data = [])
-    {
-        $output = view('Web/Views/partials/head', $data);
-        $output .= view('Panel/base/menu', $this->session->get());
-
-        foreach ($views as $view) {
-            $output .= view('Panel/' . $view, $data);
-        }
-
-        $output .= view('Panel/base/footer', $data);
-        return $output;
     }
 }

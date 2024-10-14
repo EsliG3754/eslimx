@@ -1,1 +1,0 @@
-__ci_last_regenerate|i:1722442900;_ci_previous_url|s:28:"http://localhost:8080/panel/";id_usuario|s:1:"1";nombres|s:11:"Bryan Eslí";ape_paterno|s:6:"Pulido";ape_materno|s:7:"García";correo|s:25:"esli@cebollaselESLIMX.com";perfil|N;nivel|s:1:"1";permisos|O:8:"stdClass":3:{s:10:"id_permiso";s:1:"1";s:10:"id_usuario";s:1:"1";s:17:"permiso_dashboard";s:1:"1";}is_logged|b:1;
